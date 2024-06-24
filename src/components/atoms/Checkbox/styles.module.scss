@@ -1,0 +1,77 @@
+@import "../../../assets/styles/variables/colors";
+
+.checkbox {
+    $root: &;
+
+    &__input {
+        visibility: hidden;
+
+        width: 0;
+        height: 0;
+
+        margin: 0;
+        border: 0;
+
+        &:checked + #{$root}__label {
+            &::before {
+                border-color: $pink;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        padding-left: 40px;
+
+        position: relative;
+
+        cursor: pointer;
+
+        &:hover {
+            &::before {
+                border-color: $pink;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            transform: translateY(-50%);
+
+            width: 24px;
+            height: 24px;
+
+            border: 1px solid $light_blue;
+            border-radius: 4px;
+
+            transition: all 0.2s ease-in-out;
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            width: 12px;
+            height: 12px;
+
+            background-color: $pink;
+
+            opacity: 0;
+
+            top: 50%;
+            left: 7px;
+
+            border-radius: 100%;
+
+            transform: translateY(-50%);
+
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}

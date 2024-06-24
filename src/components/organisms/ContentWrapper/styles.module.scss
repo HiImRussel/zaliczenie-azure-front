@@ -1,0 +1,19 @@
+@import "../../../assets/styles/variables//breakpoints";
+@import "../../../assets/styles/variables/colors";
+
+.content-wrapper {
+    width: 100%;
+    height: 100vh;
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    overflow-y: auto;
+
+    background-color: $dark_purple;
+
+    @media only screen and (max-width: $breakpoint_mobile) {
+        padding: 24px;
+        padding-bottom: 96px;
+    }
+}

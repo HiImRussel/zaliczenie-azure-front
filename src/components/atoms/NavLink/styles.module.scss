@@ -1,0 +1,46 @@
+@import "../../../assets/styles/variables//breakpoints";
+@import "../../../assets/styles/variables/colors";
+
+.nav-link {
+    padding: 12px;
+    margin-bottom: 34px;
+
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $light_blue;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $hover;
+    }
+
+    @media only screen and (max-width: $breakpoint_md) {
+        margin: 0;
+    }
+
+    svg {
+        fill: $light_blue;
+
+        width: 24px;
+        height: 24px;
+
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &--active {
+        background-color: $dark_pink;
+
+        svg {
+            fill: $pink;
+        }
+
+        &:hover {
+            background-color: $dark_pink;
+        }
+    }
+}

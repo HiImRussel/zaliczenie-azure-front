@@ -1,0 +1,43 @@
+@import "../../../assets/styles/variables//breakpoints";
+@import "../../../assets/styles/variables/colors";
+
+.nav {
+    position: sticky;
+    top: 0;
+
+    width: 96px;
+    height: 100vh;
+    box-sizing: border-box;
+
+    padding: 40px 24px;
+
+    background-color: $light_purple;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: $breakpoint_md) {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+
+        overflow-y: hidden;
+
+        z-index: 9;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 64px;
+
+        padding: 8px 16px;
+
+        border-top: 1px solid $light_blue;
+    }
+}

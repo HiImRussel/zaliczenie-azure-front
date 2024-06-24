@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables/breakpoints";
+@import "../../assets/styles/variables/colors";
+
+.home-view {
+    &__tasks {
+        margin-top: 32px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        @media only screen and (max-width: 950px) {
+            flex-direction: column;
+        }
+    }
+}

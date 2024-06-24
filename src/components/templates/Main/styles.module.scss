@@ -1,0 +1,13 @@
+@import "../../../assets/styles/variables//breakpoints";
+
+.app-wrapper {
+    display: flex;
+
+    @media only screen and (max-width: $breakpoint_mobile) {
+        flex-direction: column-reverse;
+    }
+
+    &__content {
+        width: 100%;
+    }
+}

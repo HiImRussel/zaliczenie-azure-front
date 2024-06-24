@@ -1,0 +1,16 @@
+.add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__title-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    &__description-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,29 @@
+@import "../../../assets/styles/variables//breakpoints";
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 72px;
+
+    height: 100%;
+
+    @media only screen and (max-width: $breakpoint_md) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    &--mobile {
+        @media only screen and (max-width: $breakpoint_md) {
+            display: flex;
+            margin: 0;
+            justify-content: center;
+        }
+    }
+}
