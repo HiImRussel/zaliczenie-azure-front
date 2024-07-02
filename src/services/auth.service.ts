@@ -16,10 +16,6 @@ interface LoginData {
 interface RegisterData {
     email: string;
     password: string;
-    phoneNumber: string;
-    address: string;
-    city: string;
-    postalCode: string;
     isAdmin?: boolean;
 }
 

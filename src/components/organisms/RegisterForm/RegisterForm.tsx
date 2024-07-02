@@ -45,11 +45,6 @@ const RegisterForm = (props: RegisterFormProps) => {
         const data = {
             email: registerFormData.email,
             password: registerFormData.password,
-            phoneNumber: registerFormData.phoneNumber,
-            address: registerFormData.address,
-            city: registerFormData.city,
-            postalCode: registerFormData.postalCode,
-            country: registerFormData.country,
         };
 
         requestParser({
