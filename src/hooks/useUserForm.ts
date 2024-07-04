@@ -16,6 +16,7 @@ const useUserForm = (args: UseUserFormArgs) => {
         args.isAdminChecked || false
     );
     const [errors, setErrors] = useState<ApiError[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     return {
         email,
@@ -26,6 +27,8 @@ const useUserForm = (args: UseUserFormArgs) => {
         setIsAdminChecked,
         errors,
         setErrors,
+        isLoading,
+        setIsLoading,
     };
 };
 

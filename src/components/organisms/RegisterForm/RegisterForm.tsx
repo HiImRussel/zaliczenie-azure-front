@@ -42,6 +42,8 @@ const RegisterForm = (props: RegisterFormProps) => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        if (registerFormData.isLoading) return;
+
         const data = {
             email: registerFormData.email,
             password: registerFormData.password,
@@ -51,6 +53,7 @@ const RegisterForm = (props: RegisterFormProps) => {
             promise: AuthServiceInstance.register(data),
             onSuccess: () => navigate(APP_URLS.LOGIN),
             onError: registerFormData.setErrors,
+            setIsLoading: registerFormData.setIsLoading,
         });
     };
 
@@ -58,7 +61,7 @@ const RegisterForm = (props: RegisterFormProps) => {
         <form onSubmit={handleSubmit}>
             <UserFormFields {...registerFormData} />
 
-            <Button fullWidth>
+            <Button fullWidth isLoading={registerFormData.isLoading}>
                 {" "}
                 {isFromAdminPage ? "Add user" : "Register"}
             </Button>
